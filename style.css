@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd; /* हल्का नीला बैकग्राउंड */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+    border: 1px solid #bbdefb;
+}
+
+h1 {
+    color: #0d47a1; /* गहरा नीला */
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 15px;
+}
+
+#progress-display {
+    font-size: 1.1rem;
+    color: #1a237e; /* गहरा इंडिगो */
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+#question {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #333;
+    background-color: #f0f4c3; /* हल्का पीला */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-btn {
+    padding: 15px;
+    background-color: #42a5f5; /* मध्यम नीला */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px #1e88e5; /* 3D प्रभाव के लिए */
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #1e88e5;
+    transform: translateY(-2px);
+}
+
+.option-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* सही/गलत उत्तरों के लिए स्टाइल */
+.option-btn.correct {
+    background-color: #4caf50 !important; /* हरा */
+    box-shadow: 0 4px #388e3c;
+}
+
+.option-btn.wrong {
+    background-color: #f44336 !important; /* लाल */
+    box-shadow: 0 4px #d32f2f;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #bbdefb;
+    border-radius: 10px;
+    border: 2px dashed #0d47a1;
+}
+
+.result h2 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+.result p.feedback {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none; 
+}
+
+#retry-btn {
+    padding: 12px 25px;
+    background-color: #ff9800; /* नारंगी */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+#retry-btn:hover {
+    background-color: #fb8c00;
+}
